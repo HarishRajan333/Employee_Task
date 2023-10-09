@@ -9,4 +9,6 @@ public interface UserCredientailsRepository extends JpaRepository<UserCredientai
 
     public UserCredientails findByUsername(String username);
 
+    public boolean existsByUsername(String username);
+
 }

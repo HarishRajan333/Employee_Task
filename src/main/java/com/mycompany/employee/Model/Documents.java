@@ -37,8 +37,7 @@ public class Documents {
     @Column(name = "file")
     private byte[] file;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JsonIgnore
+    @ManyToOne()
     @JoinColumn(name = "employee_id")
     private Employee employee;
 }

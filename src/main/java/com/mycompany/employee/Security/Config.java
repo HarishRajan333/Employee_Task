@@ -23,6 +23,7 @@ public class Config {
 //    public WebSecurityCustomizer customizer(HttpSecurity http) {
 //        return (web) -> web.ignoring().requestMatchers(registory);
 //    }
+    
     @Bean
     public SecurityFilterChain httpSecurity(HttpSecurity http) throws Exception {
         http.httpBasic(Customizer.withDefaults());

@@ -45,8 +45,9 @@ public class AuthenticationProvider implements org.springframework.security.auth
     }
 
     public List<GrantedAuthority> extractRoles(List<Roles> roles) {
-        List<GrantedAuthority> auth = roles.stream().map(r -> new SimpleGrantedAuthority("ROLE_" + r.getRoleName())).collect(Collectors.toList());
-        return auth;
+        return roles.stream()
+                .map(r -> new SimpleGrantedAuthority("ROLE_" + r.getRoleName()))
+                .collect(Collectors.toList());
     }
 
     @Override
